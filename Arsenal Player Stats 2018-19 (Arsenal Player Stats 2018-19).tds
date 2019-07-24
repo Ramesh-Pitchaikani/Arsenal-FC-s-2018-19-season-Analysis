@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20182.18.0627.2230                               -->
+<datasource formatted-name='federated.1wlu6js0dn6a5u17jdzxu0t546gs' inline='true' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <connection class='federated'>
+    <named-connections>
+      <named-connection caption='Arsenal Player Stats 2018-19' name='excel-direct.1vae7jx0i77jws15qko431atj6ad'>
+        <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/rpitchaikani/Downloads/Make Over Monday/W30 - Arsen/Arsenal Player Stats 2018-19.xlsx' interpretationMode='0' password='' server='' validate='no' />
+      </named-connection>
+    </named-connections>
+    <relation connection='excel-direct.1vae7jx0i77jws15qko431atj6ad' name='Arsenal Player Stats 2018-19' table='[&apos;Arsenal Player Stats 2018-19$&apos;]' type='table'>
+      <columns gridOrigin='A1:E589:no:A1:E589:0' header='yes' outcome='6'>
+        <column datatype='integer' name='Rank' ordinal='0' />
+        <column datatype='string' name='Player' ordinal='1' />
+        <column datatype='string' name='Nationality' ordinal='2' />
+        <column datatype='string' name='Metric' ordinal='3' />
+        <column datatype='integer' name='Stat' ordinal='4' />
+      </columns>
+    </relation>
+    <metadata-records>
+      <metadata-record class='column'>
+        <remote-name>Rank</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Rank]</local-name>
+        <parent-name>[Arsenal Player Stats 2018-19]</parent-name>
+        <remote-alias>Rank</remote-alias>
+        <ordinal>0</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Player</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Player]</local-name>
+        <parent-name>[Arsenal Player Stats 2018-19]</parent-name>
+        <remote-alias>Player</remote-alias>
+        <ordinal>1</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Nationality</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Nationality]</local-name>
+        <parent-name>[Arsenal Player Stats 2018-19]</parent-name>
+        <remote-alias>Nationality</remote-alias>
+        <ordinal>2</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Metric</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[Metric]</local-name>
+        <parent-name>[Arsenal Player Stats 2018-19]</parent-name>
+        <remote-alias>Metric</remote-alias>
+        <ordinal>3</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <collation flag='1' name='LEN_RGB_S2' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Stat</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Stat]</local-name>
+        <parent-name>[Arsenal Player Stats 2018-19]</parent-name>
+        <remote-alias>Stat</remote-alias>
+        <ordinal>4</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='capability'>
+        <remote-name />
+        <remote-type>0</remote-type>
+        <parent-name>[Arsenal Player Stats 2018-19]</parent-name>
+        <remote-alias />
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='integer' name='context'>0</attribute>
+          <attribute datatype='string' name='gridOrigin'>&quot;A1:E589:no:A1:E589:0&quot;</attribute>
+          <attribute datatype='boolean' name='header'>true</attribute>
+          <attribute datatype='integer' name='outcome'>6</attribute>
+        </attributes>
+      </metadata-record>
+    </metadata-records>
+  </connection>
+  <aliases enabled='yes' />
+  <column caption='Appearances' datatype='integer' name='[Calculation_1736982096093384705]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Appearances&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Assists' datatype='integer' name='[Calculation_1736982096094302210]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Assists&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Big Chances Missed' datatype='integer' name='[Calculation_1736982096097038339]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Big Chances Missed&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Clearances' datatype='integer' name='[Calculation_1736982096097202180]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Clearances&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Clearances Off Line' datatype='integer' name='[Calculation_1736982096097452037]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Clearances Off Line&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Dispossessed' datatype='integer' name='[Calculation_1736982096097574918]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Dispossessed&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Fouls' datatype='integer' name='[Calculation_1736982096097681415]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Fouls&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Goals' datatype='integer' name='[Calculation_1736982096097771528]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Goals&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='High Claim' datatype='integer' name='[Calculation_1736982096097853449]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;High Claim&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Hit Woodwork' datatype='integer' name='[Calculation_1736982096097959946]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Hit Woodwork&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Minutes Played' datatype='integer' name='[Calculation_1736982096098062347]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Minutes Played&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Offsides' datatype='integer' name='[Calculation_1736982096098246668]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Offsides&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Own Goal' datatype='integer' name='[Calculation_1736982096098365453]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Own Goal&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Passes' datatype='integer' name='[Calculation_1736982096098459662]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Passes&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Punches' datatype='integer' name='[Calculation_1736982096098553871]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Punches&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Red Cards' datatype='integer' name='[Calculation_1736982096098635792]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Red Cards&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Saves' datatype='integer' name='[Calculation_1736982096098725905]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Saves&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Shots' datatype='integer' name='[Calculation_1736982096098811922]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Shots&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Tackles' datatype='integer' name='[Calculation_1736982096098910227]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Tackles&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Touches' datatype='integer' name='[Calculation_1736982096098996244]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Touches&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Yellow Cards' datatype='integer' name='[Calculation_1736982096099082261]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='INT( if [Metric]=&apos;Yellow Cards&apos; THEN [Stat] else null end)' />
+  </column>
+  <column caption='Calc Dirty Player' datatype='string' name='[Calculation_1736982096389324822]' role='dimension' type='nominal'>
+    <calculation class='tableau' formula='IF [Calculation_1736982096099082261] = null and [Calculation_1736982096098635792] = NULL then &apos;Non-Offensive Player&apos;&#13;&#10;ELSEIF [Calculation_1736982096099082261] &lt;&gt; null and [Calculation_1736982096098635792] &lt;&gt; NULL then &apos;Offensive Player&apos;&#13;&#10;END' />
+  </column>
+  <column datatype='string' name='[Metric]' role='dimension' type='nominal' />
+  <column datatype='string' name='[Nationality]' role='dimension' semantic-role='[Country].[Name]' type='nominal'>
+    <semantic-values semantic-role='[Country].[Name]'>
+      <semantic-value key='&quot;England&quot;' value='&quot;United Kingdom&quot;' />
+      <semantic-value key='&quot;Wales&quot;' value='&quot;United Kingdom&quot;' />
+    </semantic-values>
+  </column>
+  <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+    <calculation class='tableau' formula='1' />
+  </column>
+  <column datatype='string' name='[Player]' role='dimension' type='nominal' />
+  <column aggregation='Sum' datatype='integer' name='[Rank]' role='dimension' type='ordinal' />
+  <column aggregation='Sum' datatype='integer' name='[Stat]' role='dimension' type='ordinal' />
+  <group name='[Set 1]' name-style='unqualified' user:ui-builder='filter-group'>
+    <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+      <groupfilter direction='DESC' expression='AVG([Rank])' function='order' user:ui-marker='order'>
+        <groupfilter function='level-members' level='[Metric]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </groupfilter>
+    </groupfilter>
+  </group>
+  <group name='[Set 2]' name-style='unqualified' user:ui-builder='filter-group'>
+    <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+      <groupfilter direction='DESC' expression='COUNT([Player])' function='order' user:ui-marker='order'>
+        <groupfilter function='level-members' level='[Rank]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </groupfilter>
+    </groupfilter>
+  </group>
+  <group name='[Set 3]' name-style='unqualified' user:ui-builder='filter-group'>
+    <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+      <groupfilter direction='DESC' expression='COUNT([Player])' function='order' user:ui-marker='order'>
+        <groupfilter function='level-members' level='[Stat]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </groupfilter>
+    </groupfilter>
+  </group>
+  <extract count='-1' enabled='true' units='records'>
+    <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/rpitchaikani/Documents/My Tableau Repository/Datasources/Make over Monday/Arsenal Player Stats 2018-19 (Arsenal Player Stats 2018-19).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='07/23/2019 03:20:37 PM' username='tableau_internal_user'>
+      <relation name='Extract' table='[Extract].[Extract]' type='table' />
+      <refresh>
+        <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='588' timestamp-start='2019-07-23 15:20:37.647' />
+      </refresh>
+      <metadata-records>
+        <metadata-record class='column'>
+          <remote-name>Rank</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[Rank]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Rank</remote-alias>
+          <ordinal>0</ordinal>
+          <family>Arsenal Player Stats 2018-19</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>28</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Player</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Player]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Player</remote-alias>
+          <ordinal>1</ordinal>
+          <family>Arsenal Player Stats 2018-19</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>28</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RGB_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Nationality</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Nationality]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Nationality</remote-alias>
+          <ordinal>2</ordinal>
+          <family>Arsenal Player Stats 2018-19</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>14</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RGB_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Metric</remote-name>
+          <remote-type>129</remote-type>
+          <local-name>[Metric]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Metric</remote-alias>
+          <ordinal>3</ordinal>
+          <family>Arsenal Player Stats 2018-19</family>
+          <local-type>string</local-type>
+          <aggregation>Count</aggregation>
+          <approx-count>21</approx-count>
+          <contains-null>true</contains-null>
+          <collation flag='1' name='LEN_RGB_S2' />
+        </metadata-record>
+        <metadata-record class='column'>
+          <remote-name>Stat</remote-name>
+          <remote-type>20</remote-type>
+          <local-name>[Stat]</local-name>
+          <parent-name>[Extract]</parent-name>
+          <remote-alias>Stat</remote-alias>
+          <ordinal>4</ordinal>
+          <family>Arsenal Player Stats 2018-19</family>
+          <local-type>integer</local-type>
+          <aggregation>Sum</aggregation>
+          <approx-count>130</approx-count>
+          <contains-null>true</contains-null>
+        </metadata-record>
+      </metadata-records>
+    </connection>
+  </extract>
+  <layout dim-ordering='alphabetic' dim-percentage='0.250426' group-percentage='0.107325' measure-ordering='alphabetic' measure-percentage='0.642249' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+  </semantic-values>
+  <date-options start-of-week='monday' />
+  <field-sort-info field-sort-order-type='custom-order'>
+    <field-sort-custom-order field='Rank' />
+    <field-sort-custom-order field='Player' />
+    <field-sort-custom-order field='Nationality' />
+    <field-sort-custom-order field='Metric' />
+    <field-sort-custom-order field='Calculation_1736982096099082261' />
+    <field-sort-custom-order field='Calculation_1736982096098996244' />
+    <field-sort-custom-order field='Calculation_1736982096098910227' />
+    <field-sort-custom-order field='Calculation_1736982096098811922' />
+    <field-sort-custom-order field='Calculation_1736982096098725905' />
+    <field-sort-custom-order field='Calculation_1736982096098635792' />
+    <field-sort-custom-order field='Calculation_1736982096098553871' />
+    <field-sort-custom-order field='Calculation_1736982096098459662' />
+    <field-sort-custom-order field='Calculation_1736982096098365453' />
+    <field-sort-custom-order field='Calculation_1736982096098246668' />
+    <field-sort-custom-order field='Calculation_1736982096098062347' />
+    <field-sort-custom-order field='Calculation_1736982096097959946' />
+    <field-sort-custom-order field='Calculation_1736982096097853449' />
+    <field-sort-custom-order field='Calculation_1736982096097771528' />
+    <field-sort-custom-order field='Calculation_1736982096097681415' />
+    <field-sort-custom-order field='Calculation_1736982096097574918' />
+    <field-sort-custom-order field='Calculation_1736982096097452037' />
+    <field-sort-custom-order field='Calculation_1736982096097202180' />
+    <field-sort-custom-order field='Calculation_1736982096097038339' />
+    <field-sort-custom-order field='Calculation_1736982096094302210' />
+    <field-sort-custom-order field='Calculation_1736982096093384705' />
+    <field-sort-custom-order field='Stat' />
+  </field-sort-info>
+</datasource>
